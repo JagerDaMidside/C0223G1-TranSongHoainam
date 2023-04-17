@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CACULATOR</title>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <th><input type="text" id="sodautien">
+                <input type="text" id="sothuhai"></th>
+        </tr>
+        <tr>
+            <th>
+                <button type="button" onclick="tong()">Addition(+)</button>
+
+                <button type="button" onclick="hieu()">subtraction(-)</button>
+
+                <button type="button" onclick="tich()">Mutiplication(X)</button>
+
+                <button type="button" onclick="thuong()">Division(/)</button>
+            </th>
+        </tr>
+        <tr>
+            <th><h1 id="e"></h1></th>
+        </tr>
+    </table>
+</form>
+<script>
+    function tong() {
+        let a = document.getElementById("sodautien").value;
+        let c = parseInt(a);
+        let b = document.getElementById("sothuhai").value;
+        let d = parseInt(b);
+        let tong;
+        tong = c + d;
+        document.getElementById("e").innerText="Result " + tong;
+
+    }
+
+    function hieu() {
+        let a = document.getElementById("sodautien").value;
+        let c = parseInt(a);
+        let b = document.getElementById("sothuhai").value;
+        let d = parseInt(b);
+        let hieu;
+        hieu = c - d;
+        document.getElementById("e").innerText="Result " + hieu;
+    }
+
+    function tich() {
+        let a = document.getElementById("sodautien").value;
+        let c = parseInt(a);
+        let b = document.getElementById("sothuhai").value;
+        let d = parseInt(b);
+        let tich;
+        tich = c * d;
+        document.getElementById("e").innerText="Result " + tich;
+    }
+
+    function thuong() {
+        let a = document.getElementById("sodautien").value;
+        let c = parseInt(a);
+        let b = document.getElementById("sothuhai").value;
+        let d = parseInt(b);
+        let thuong;
+        thuong = c / d;
+        document.getElementById("e").innerText="Result " + thuong;
+    }
+</script>
+</body>
+</html>

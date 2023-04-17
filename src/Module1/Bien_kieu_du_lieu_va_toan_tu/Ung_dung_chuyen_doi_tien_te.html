@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen doi tien te</title>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <th> Amount</th>
+            <th>From Currency</th>
+            <th>To currency</th>
+        </tr>
+        <tr>
+            <td><input type="text" id="tienchuachuyen"</td>
+            <td>
+                <select name="quocgia" id="chonquocgia">
+                    <option>VND</option>
+                    <option>USD</option>
+                </select>
+            </td>
+            <td>
+                <select name="dongtienmuonchuyensang" id="tienmuonchuyen">
+                    <option>VND</option>
+                    <option>USD</option>
+                </select>
+            </td>
+            <td>
+                <button type="button" onclick="checkId()">convert
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h1 id="e"></h1>
+            </td>
+        </tr>
+    </table>
+</form>
+<script>
+    function checkId() {
+        let a = document.getElementById("tienchuachuyen").value;
+        let b = document.getElementById("chonquocgia").value;
+        let c = document.getElementById("tienmuonchuyen").value;
+        let d;
+        let dong = 23000;
+        if (b == "VND" && c == "USD") {
+            d = a / dong;
+
+        } else if (b == "USD" && c == "VND") {
+            d = a * dong;
+        }
+        document.getElementById("e").innerText = "Result " + d;
+    }
+</script>
+</body>
+</html>
