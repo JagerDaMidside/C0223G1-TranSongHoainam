@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mangA = [];
+    for (let i = 1; i <= 10; i++) {
+        mangA[i] = prompt("Nhập phần tử của mảng A");
+    }
+    alert("Mảng A đã nhập vào là" + mangA)
+    let mangB = [];
+    for (let i = 1; i <= 10; i++) {
+        mangB[i] = prompt("Nhập phần tử của mảng B");
+    }
+    alert("Mảng B đã nhập vào là" + mangB);
+    let mangC = [];
+    document.write("Mảng sau khi nối A và B là "+mangC.concat(mangA,mangB));
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soNguyen = [];
+    for (let i = 1; i <= 10; i++) {
+        soNguyen[i] = prompt("Nhập phần tử của mảng");
+    }
+    alert("Mảng đã nhập vào là" + soNguyen)
+    soNguyen.sort(function (a, b) {
+        return b - a;
+
+    })
+    alert("Mảng sau khi sắp xếp lại là " + soNguyen)
+</script>
+</body>
+</html>
