@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soNguyen = [];
+    let chieuDai = prompt("Số lượng phần tử của mảng là");
+    for (let i = 1; i <= chieuDai; i++) {
+        soNguyen[i] = prompt("Nhập phần tử của mảng");
+    }
+    let soV = prompt("Số bạn muốn xem có nằm trong bảng không")
+    for (let k = 0; k < soNguyen.length; k++) {
+        if (soNguyen[k] === soV) {
+            alert("Số bạn nhập có trong mảng")
+            break;
+        }else alert("Số bạn nhập không có trong mảng")
+        break;
+    }
+</script>
+</body>
+</html>

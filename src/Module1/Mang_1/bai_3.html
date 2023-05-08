@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soNguyen = [1, 2, 13, 52, 41, 18, 8, 4, 100];
+    let max = soNguyen[0];
+    for (let i = 1; i < soNguyen.length; i++) {
+        if (soNguyen[i] > max) {
+            max = soNguyen[i]
+        }
+    }
+    alert("Số lớn nhất trong mảng là " + max);
+    let tong = 0;
+    for (let k = 0; k < soNguyen.length; k++) {
+        tong = tong + soNguyen[k]
+    }
+    let trungBinh
+    trungBinh = tong / soNguyen.length
+    alert("Trung bình các số trong mảng là" + trungBinh)
+</script>
+</body>
+</html>

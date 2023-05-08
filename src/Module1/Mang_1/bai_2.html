@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soNguyen = [1, 2, 13, 52, 41, 18, 8, 4, 100];
+    let max = soNguyen[0];
+    for (let i = 1; i < soNguyen.length; i++) {
+        if (soNguyen[i] > max) {
+            max = soNguyen[i]
+        }
+    }
+    alert("Số lớn nhất trong mảng là " + max);
+    alert("Vị trí của phần tử đó là " + soNguyen.indexOf(max));
+</script>
+</body>
+</html>

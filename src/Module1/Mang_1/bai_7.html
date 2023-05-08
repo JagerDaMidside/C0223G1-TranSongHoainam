@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soNguyen = [];
+    for (let i = 1; i <= 10; i++) {
+        soNguyen[i] = prompt("Nhập phần tử của mảng");
+    }
+    alert("Mảng đã nhập vào là" + soNguyen)
+    let soV = prompt("Nhập vào số V")
+    let flag = false;
+    for (let k = 0; k < soNguyen.length; k++) {
+        if (soNguyen[k] === soV) {
+            soNguyen.splice(soNguyen[k], 1)
+            flag = true;
+            alert("Mảng sau khi xoá số V là" + soNguyen)
+            break;
+        }
+    }
+    if (!flag) {
+        alert("Số V không có trong mảng")
+    }
+</script>
+</body>
+</html>
