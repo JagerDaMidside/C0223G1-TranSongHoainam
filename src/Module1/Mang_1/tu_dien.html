@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<form>
+    <p>Dịch tiếng Anh</p>
+    <input type="text" id="text"/>
+    <input type="button" id="btnDich" value="Dịch" onclick="dich();"/>
+    <p id="viet"/>
+</form>
+<script>
+    let flag = false;
+    let mTA = ["book", "bag", "pen", "minh cường", "wife"];
+    let mTV = ["sách", "cặp", "bút", "con chó","kim ngoc"];
+
+    function dich() {
+        for (let i = 0; i < mTA.length; i++) {
+            if (mTA[i] === text.value) {
+                flag = true;
+                document.getElementById("viet").innerHTML = mTV[i];
+                break;
+            }
+        }
+        if (!flag) {
+            // alert("loi");
+            document.getElementById("viet").innerText= "Lỗi";
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function tinhDienTichHinhTron(banKinh) {
+        return Math.PI * banKinh ** 2;
+    }
+
+    function tinhChuViHinhTron(banKinh) {
+        return 2 * Math.PI * banKinh;
+    }
+
+    let banKinh = +prompt("Nhập vào bán kính hình tròn");
+    let dienTich = tinhDienTichHinhTron(banKinh);
+    let chuVi = tinhChuViHinhTron(banKinh);
+    alert("Diện tích hình tròn là " + dienTich);
+    alert("Chu vi hình tròn là " + chuVi);
+
+</script>
+</body>
+</html>

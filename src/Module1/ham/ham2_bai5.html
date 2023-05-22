@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function timSoNhoNhat(a, b, c) {
+        let soNhoNhat = a;
+        if (b < soNhoNhat) {
+            soNhoNhat = b;
+        }
+        if (c < soNhoNhat) {
+            soNhoNhat = c;
+        }
+        return soNhoNhat;
+    }
+
+    let soDauTien = +prompt("Mời nhập số đầu tiên");
+    let soThuHai = +prompt("Mời nhập số thứ hai");
+    let soThuBa = +prompt("Mời nhập số thứ ba");
+    let ketQua = timSoNhoNhat(soDauTien, soThuHai, soThuBa);
+    alert("Số nhỏ nhất trong 3 số là " + ketQua);
+</script>
+</body>
+</html>

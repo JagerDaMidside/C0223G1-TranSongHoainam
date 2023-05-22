@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let sao = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let chomSao = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+    function timChomSao(starName) {
+
+        for (let i = 0; i < sao.length; i++) {
+
+            if (sao[i] === starName) {
+                return chomSao[i];
+            }
+        }
+
+        return false;
+    }
+
+    let tenSao = prompt("Nhập tên của ngôi sao:");
+    let tenChomSao = timChomSao(tenSao);
+    if (tenChomSao) {
+        alert("Ngôi sao bạn nhập vào thuộc chòm sao " + tenChomSao);
+    } else {
+        alert("Không tìm thấy ngôi sao có tên " + tenSao);
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function tinhGiaiThua(so) {
+        let ketQua = 1;
+        for (let i = 2; i <= so; i++) {
+            ketQua *= i;
+        }
+        return ketQua;
+    }
+
+    let so = +prompt("Nhập vào số cần tính giai thừa")
+    ketQua = tinhGiaiThua(so);
+    alert("giai thừa của số đó là " + ketQua);
+
+</script>
+</body>
+</html>
