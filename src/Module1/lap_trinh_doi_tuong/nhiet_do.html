@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(celsius) {
+            if (celsius < -273) {
+                alert("Nhiệt độ nhập vào dưới độ không tuyệt đối");
+            }
+            this.celsius = celsius;
+        }
+
+        get doF() {
+            return this.celsius * 1.8 + 32;
+        }
+
+        get doKelvin() {
+            return this.celsius + 273.15;
+        }
+    }
+
+    let nhap = +prompt("Nhập vào độ C cần chuyển đổi");
+    let temp = new Temperature(nhap);
+    alert("Sau khi chuyển thành độ F là " + temp.doF);
+    alert("Sau khi chuyển thành độ Kelvin là " + temp.doKelvin);
+
+</script>
+</body>
+</html>

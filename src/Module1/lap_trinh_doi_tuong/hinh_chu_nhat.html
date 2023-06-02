@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Regtangle {
+        constructor(chieuDai, chieuRong) {
+            this.chieuDai = chieuDai;
+            this.chieuRong = chieuRong;
+        }
+
+        getchieuDai() {
+            return this.chieuDai;
+        }
+
+        getchieuRong() {
+            return this.chieuRong;
+        }
+
+        getdienTich() {
+            return this.chieuDai * this.chieuRong;
+        }
+
+        getchuVi() {
+            return 2 * (this.chieuDai + this.chieuRong);
+        }
+
+    }
+
+    let a = +prompt("nhập vào chiều dài hình chữ nhật");
+    let b = +prompt("nhập vào chiều rộng hình chữ nhật");
+    let chuNhat = new Regtangle(a, b);
+    alert("chu vi của hình chữ nhật là " + chuNhat.getchuVi());
+    alert("diện tích của hình chữ nhật là " + chuNhat.getdienTich());
+</script>
+</body>
+</html>

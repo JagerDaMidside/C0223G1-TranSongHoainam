@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nhap = +prompt("Nhập vào lương của bạn");
+    let thue;
+    if (nhap>=15000000){
+      thue = nhap/100*20;
+    }else if(nhap>7000000){
+        thue = nhap/100*10;
+    }else{
+        thue = nhap/100*5;
+    }
+    let luongRong = nhap - thue
+    alert("thuế bạn phải đóng là "+thue);
+    alert("Lương ròng của bạn là "+luongRong);
+</script>
+</body>
+</html>
