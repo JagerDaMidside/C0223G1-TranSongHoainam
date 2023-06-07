@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function drinkMenu() {
+        const menu = [
+            "Cafe",
+            "Cam vắt",
+            "Nước ép cà rốt",
+            "Nước ép cà chua",
+            "Nước lọc",
+            "Nước dừa",
+            "Thoát gọi món"
+        ];
+
+        const prices = [10, 15, 12, 14, 5, 8];
+
+        let total = 0;
+        let order = "";
+
+        do {
+            console.log("Danh sách thức uống:");
+            for (let i = 0; i < menu.length; i++) {
+                alert(`${i + 1}. ${menu[i]}`);
+            }
+
+            const choice = parseInt(prompt("Chọn thức uống tương ứng : 1 (cafe), 2 (cam vắt), 3(nước ép cà rốt), 4(nước ép cà chua), 5(nước lọc), 6(nước dừa), 7(thoát gọi món)"));
+
+            if (choice >= 1 && choice <= menu.length - 1) {
+                const quantity = parseInt(prompt("Nhập số lượng:"));
+                const price = prices[choice - 1];
+                const subtotal = price * quantity;
+
+                alert(`Bạn đã chọn ${menu[choice - 1]}`);
+                alert(`Đơn giá: ${price}`);
+                alert(`Số lượng: ${quantity}`);
+                alert(`Thành tiền: ${subtotal}`);
+
+                total += subtotal;
+            } else if (choice === menu.length) {
+                break;
+            } else {
+                alert().log("Lựa chọn không hợp lệ!");
+            }
+        } while (true);
+
+        alert(`Tổng số tiền cần thanh toán: ${total}`);
+    }
+
+    drinkMenu();
+
+</script>
+</body>
+</html>

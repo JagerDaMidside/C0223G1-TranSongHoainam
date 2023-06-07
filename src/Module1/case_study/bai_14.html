@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function lietKeSoNguyenTo(mang) {
+        let soNguyenTo = [];
+        let demSoNguyenTo = 0;
+
+
+        function laSoNguyenTo(so) {
+            if (so < 2) return false;
+            for (let i = 2; i <= Math.sqrt(so); i++) {
+                if (so % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+
+        for (let i = 0; i < mang.length; i++) {
+            for (let j = 0; j < mang[i].length; j++) {
+                let phanTu = mang[i][j];
+                if (laSoNguyenTo(phanTu)) {
+                    soNguyenTo.push(phanTu);
+                    demSoNguyenTo++;
+                }
+            }
+        }
+
+
+        if (demSoNguyenTo === 0) {
+            alert("Không có số nguyên tố trong mảng.");
+        } else {
+            alert("Các số nguyên tố trong mảng: " + soNguyenTo.join(", "));
+            alert("Số lượng số nguyên tố trong mảng: " + demSoNguyenTo);
+        }
+    }
+
+
+    let mang = [];
+    let chieuDai = prompt("Số lượng phần tử của mảng là");
+    for (let i = 1; i <= chieuDai; i++) {
+        mang[i] = prompt("Nhập phần tử của mảng");
+    }
+    lietKeSoNguyenTo(mang);
+
+</script>
+</body>
+</html>

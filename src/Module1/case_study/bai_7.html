@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [];
+    let chieuDaiA = prompt("Số lượng phần tử của mảng A là");
+    let b = [];
+    let chieuDaiB = prompt("Số lượng phần tử của mảng B là");
+    let c = [];
+    for (let i = 0; i < chieuDaiA; i++) {
+        a[i] = prompt("Nhập phần tử của mảng A");
+    }
+    for (let j = 0; j < chieuDaiB; j++) {
+        b[j] = prompt("Nhập phần tử của mảng B");
+    }
+    document.write(a + "</br>");
+    document.write(b + "</br>");
+    for (let k = 0; k < chieuDaiB; k++) {
+        if (a.indexOf(b[k]) === -1 && c.indexOf(b[k]) === -1)
+        {
+            c.push(b[k]);
+        }
+    }
+    document.write("Các số còn thiếu : " + c);
+</script>
+</body>
+</html>

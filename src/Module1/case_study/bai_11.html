@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function demSoLuongKiTuKhacNhau(xau) {
+        let kyTuKhacNhau = new Set(xau.split(''));
+        return kyTuKhacNhau.size;
+    }
+
+    function main() {
+        let xau = prompt("Nhập xâu ký tự:");
+        let soLuong = demSoLuongKiTuKhacNhau(xau);
+        alert("Số lượng kí tự khác nhau trong xâu: " + soLuong);
+    }
+
+    main();
+
+</script>
+</body>
+</html>

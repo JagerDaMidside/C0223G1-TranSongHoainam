@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function chuanHoaXau(xau) {
+        const tu = xau.trim().split(/\s+/);
+        const tuChuanHoa = tu.map(tu => tu.charAt(0).toUpperCase() + tu.slice(1).toLowerCase());
+        return tuChuanHoa.join(' ');
+    }
+
+    function timTuDaiNhat(xau) {
+        const tu = xau.trim().split(/\s+/);
+        let tuDaiNhat = '';
+
+        for (let i = 0; i < tu.length; i++) {
+            if (tu[i].length > tuDaiNhat.length) {
+                tuDaiNhat = tu[i];
+            }
+        }
+
+        return tuDaiNhat;
+    }
+
+    function main() {
+        const xauNhap = prompt("Nhập xâu ký tự:");
+        alert("Xâu trước khi chuẩn hóa: " + xauNhap);
+
+        const xauChuanHoa = chuanHoaXau(xauNhap);
+        alert("Xâu sau khi chuẩn hóa: " + xauChuanHoa);
+
+        const tuDaiNhat = timTuDaiNhat(xauChuanHoa);
+        alert("Từ dài nhất trong xâu: " + tuDaiNhat);
+    }
+
+    main();
+
+</script>
+</body>
+</html>

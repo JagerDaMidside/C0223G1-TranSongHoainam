@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function demSoLuongKiTuChung(xau1, xau2) {
+        let dem = 0;
+        let kyTuXau1 = xau1.split('');
+        let kyTuXau2 = xau2.split('');
+
+        for (let i = 0; i < kyTuXau1.length; i++) {
+            let index = kyTuXau2.indexOf(kyTuXau1[i]);
+            if (index !== -1) {
+                dem++;
+                kyTuXau2.splice(index, 1);
+            }
+        }
+
+        return dem;
+    }
+
+    function main() {
+        let s1 = prompt("Nhập xâu ký tự thứ nhất:");
+        let s2 = prompt("Nhập xâu ký tự thứ hai:");
+
+        let soLuong = demSoLuongKiTuChung(s1, s2);
+        alert("Số lượng kí tự chung: " + soLuong);
+    }
+
+    main();
+
+</script>
+</body>
+</html>
